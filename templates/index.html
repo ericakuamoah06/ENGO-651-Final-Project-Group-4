@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+
+</head>
+
+<body>
+    <!-- Side Nav -->
+    <div id="sidebar">
+        <div class="sideBarContent">
+            <div class="sideBarHeader" id="sideBarHeader">
+                <h5 id="sideBarHeaderTitle">Short Term Residents Map</h5>
+            </div>
+
+            <div id="mapfunctions">
+
+                <div class="sideBarAddLocation">
+                    <form id="nearestShortTermForm" class="needs-validation">
+                        <div class="form-group">
+                            <label for="numberOfLocations">Enter number of short term rentals</label>
+                            <input class="form-control" type="number" name="numberOfLocations" id="numberOfLocations"
+                                maxlength="4" required min="1" max="100">
+                        </div>
+                        <div class="form-group">
+                            <button id="getNearestShortTermRentalsBtn">Nearest Short Term Rentals</button>
+                        </div>
+                    </form>
+                </div>
+                <br />
+            </div>
+
+            <div id="sideBarFooter">
+                <div class="sideBarFooterContainer">
+                    <div class="sideBarFooterShareLoc">
+                       
+                        <small><button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#chartModal">
+                                Show Community Crime Statistics
+                            </button></small>
+                        <hr>
+                        <small><button id="viewAllLayersId">Toggle Map Layers</button></small>
+                        <small>
+                            <ul id="viewForLayers">
+                                <li><small class="badge badge-danger" id="TrafficIncidentsCount">
+                                        <div class="spinner-grow" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </small></li>
+                                <li><small class="badge badge-teal" id="communityServiceCount">
+                                        <div class="spinner-grow" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </small></li>
+                                <li><small class="badge badge-purple" id="shortTermRentalCount">
+                                        <div class="spinner-grow" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </small></li>
+                            </ul>
+                        </small>
+                        <small><button class="" id="shareLocBtn">Share Your
+                                Location</button></small>
+                        <br />
+                        <small id="showShareLocCordinates">
+                            <div class="spinner-grow" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </small>
+                    </div>
+                    <small>
+                        <a href="/profile">
+                            {% if user_name %}
+                            {{user_name}}
+                            {% endif %}
+                        </a>
+                    </small>
+                    <small>
+                        {% if user_name %}
+                        {{user_email}}
+                        {% endif %}
+                    </small>
+                    <small id="currentDate"></small>
+                    <small><a href="/logout">Logout</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <div id="map">
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="chartModal" tabindex="-1" role="dialog" aria-labelledby="chartModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="chartModalLabel">Bar Chart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <canvas id="crimeChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Leaflet.js Map -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-csv-geojson/dist/leaflet-csv-geojson.min.js"></script>
+    <script src="https://unpkg.com/leaflet-ajax/dist/leaflet.ajax.min.js"></script>
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+        integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chartjs.js') }}"></script>
+
+</body>
+
+</html>
