@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,12 +13,15 @@
 <body>
     <header id="signup-header">
         <div class="">
-            <h1 class="display-5 text-center">Get Nearest Short Term Rentals</h1>
+            <h3 class="display-5 text-center">My GeoGuy</h3>
         </div>
     </header>
 
     <main>
         <div class="container">
+            <div class="container text-center logo-container">
+                <img src="{{ url_for('static', filename='image/logo.jpg') }}" alt="My GeoGuy Logo" class="logo">
+            </div>
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     {% if message %}
@@ -28,7 +32,7 @@
                         </button>
                     </div>
                     <script>
-                        setTimeout(function() {
+                        setTimeout(function () {
                             $('.alert').alert('close');
                         }, 3000);
                     </script>
@@ -52,9 +56,11 @@
                         <div class="form-group">
                             <p>Already have an account? <a href="/login">Login here</a></p>
                         </div>
-                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-block btn-primary">Sign Up</button>
+                        </div>
                     </form>
-                   
+
                 </div>
             </div>
         </div>
@@ -62,7 +68,7 @@
 
     <footer>
         <div class="container text-center">
-            <p>Developed by: Eric Akuamoah and John Oyeniyi</p>
+            <small>Developed by: Eric Akuamoah and John Oyeniyi</small>
             <small>&copy; 2024 Project.</small>
         </div>
     </footer>

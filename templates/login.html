@@ -12,12 +12,18 @@
 <body>
     <header id="login-header">
         <div class="">
-            <h1 class="display-5 text-center">Get Nearest Short Term Rentals</h1>
+            <h3 class="text-center">My GeoGuy</h3>
         </div>
     </header>
 
+
     <main>
         <div class="container">
+
+            <div class="container text-center logo-container">
+                <img src="{{ url_for('static', filename='image/logo.png') }}" alt="My GeoGuy Logo" class="logo">
+            </div>
+
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     {% if message %}
@@ -47,7 +53,9 @@
                         <div class="form-group">
                             <p>I do not have an account <a href="/register">Create Account</a></p>
                         </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-block btn-primary">Login</button>
+                        </div>
                     </form>
 
                 </div>
@@ -57,7 +65,7 @@
 
     <footer>
         <div class="container text-center">
-            <p>Developed by: Eric Akuamoah and John Oyeniyi</p>
+            <small>Developed by: Eric Akuamoah and John Oyeniyi</small>
             <small>&copy; 2024 Project.</small>
         </div>
     </footer>

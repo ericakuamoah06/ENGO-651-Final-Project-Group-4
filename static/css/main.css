@@ -1,147 +1,163 @@
- /* Custom styles for the side nav */
- #sidebar {
-     width: 300px;
-     position: fixed;
-     top: 0;
-     left: 0;
-     height: 100vh;
-     background-color: #f1f1f1;
-     padding-top: 20px;
-     padding-left: 5px;
-     padding-right: 10px;
- }
+/* Custom styles for the side nav */
+#sidebar {
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #f1f1f1;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 10px;
+}
 
 
- #sideBarFooter {
-     position: fixed;
-     bottom: 0;
-     left: 0;
-     width: 300px;
-     padding: 10px;
- }
+#sideBarFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    padding: 10px;
+}
 
- .sideBarFooterContainer {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     gap: 5px;
- }
+.sideBarFooterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
 
- .sideBarFooterShareLoc {
-     margin-bottom: 30px;
- }
+.sideBarFooterShareLoc {
+    margin-bottom: 30px;
+}
 
- #shareLocBtn,
- #viewAllLayersId {
-     padding: 5px;
-     border: 1px solid #5ef564;
-     background-color: #5ef564;
-     border-radius: 5px;
-     margin-bottom:10px;
- }
+.logo{
+       width: 200px;
+       height: 200px;
+}
 
- #getNearestShortTermRentalsBtn {
-     padding: 5px;
-     border: 1px solid #5ef564;
-     background-color: #054908;
-     border-radius: 5px;
-     color: white;
-     margin-bottom: 10px;
- }
+#shareLocBtn,
+#viewAllLayersId {
+    padding: 5px;
+    border: 1px solid #5ef564;
+    background-color: #5ef564;
+    border-radius: 5px;
+    margin-bottom:10px;
+}
 
-
-
- #map {
-     margin-left: 300px;
-     height: 100vh;
- }
-
- /* Custom styles for the main content */
- #main-content {
-     margin-top: 0;
-     height: 100vh;
- }
-
- /* Custom styles for the header */
- .sideBarHeader {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     gap: 5px;
- }
+#getNearestShortTermRentalsBtn {
+    padding: 5px;
+    border: 1px solid #5ef564;
+    background-color: #054908;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 10px;
+}
 
 
- footer {
-     position: fixed;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-     background-color: black;
-     color: white;
-     padding: 10px;
- }
+
+#map {
+    margin-left: 300px;
+    height: 100vh;
+}
+
+/* Custom styles for the main content */
+#main-content {
+    margin-top: 0;
+    height: 100vh;
+}
+
+/* Custom styles for the header */
+.sideBarHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-container {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   overflow: hidden;
+}
+
+.logo {
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+}
 
 
- #login-header div {
-     background-color: black;
-     color: white;
-     padding: 20px;
- }
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
 
 
- .sideBarAddLocation {
-     margin-top: 20px;
-     border: 3px solid #5ef564;
-     padding-left: 5px;
-     padding-right: 5px;
- }
-
- #nearestShortTermForm {
-     margin-top: 20px;
-     padding-left: 5px;
-     display: flex;
-     flex-direction: column;
-     gap: 10px;
-     justify-content: baseline;
- }
-
- #login-header {
-     margin-bottom: 100px;
- }
-
- #loginForm {
-     background-color: #f3f3f3;
-     padding: 30px;
- }
+#login-header div {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
 
 
- #signup-header div {
-     background-color: black;
-     color: white;
-     padding: 20px;
- }
+.sideBarAddLocation {
+    margin-top: 20px;
+    border: 3px solid #5ef564;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#nearestShortTermForm {
+    margin-top: 20px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: baseline;
+}
+
+#login-header {
+    margin-bottom: 20px;
+}
+
+#loginForm {
+    padding: 30px;
+}
 
 
- #signup-header {
-     margin-bottom: 100px;
- }
+#signup-header div {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
 
- #signupForm {
-     background-color: #f3f3f3;
-     padding: 30px;
- }
 
- .mapLegend {
-     background-color: white;
-     padding: 10px;
- }
+#signup-header {
+    margin-bottom: 20px;
+}
 
- .badge-teal {
-     background-color: teal;
-     color: white;
- }
+#signupForm {
+    padding: 20px;
+}
 
- .badge-purple {
-     background-color: purple;
-     color: white;
- }
+.mapLegend {
+    background-color: white;
+    padding: 10px;
+}
+
+.badge-teal {
+    background-color: teal;
+    color: white;
+}
+
+.badge-purple {
+    background-color: purple;
+    color: white;
+}
