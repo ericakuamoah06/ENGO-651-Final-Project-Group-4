@@ -28,3 +28,10 @@ The project's goal is to create an app that can assist in recommending the best 
 * app.py - app file, contains GET/POST request logic for each page
 * usertable.sql - where data about users are stored
 * main.css - has styling of the pages
+
+### Restful API Backend
+
+* Login Page: Post request to authenticate user and check credentials in database / Get request to render template
+* Profile Page: Post request to add new user record to database / Get request to render template
+* Home (index) Page: Post request to add update to update list / Get request to render template and get list of updates from database
+* Signup Page: Get request to render template
