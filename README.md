@@ -41,3 +41,10 @@ The project's goal is to create an app that can assist in recommending the best 
 * Users can see a heat map of the traffic incidents in the city
 * Users can share live location on the map
 * users can run analyses with their live location
+
+### Commands to run
+pip/pip3 install requirement.txt
+set FLASK_APP=app.py
+set FLASK_DEBUG=1
+set DATABASE_URL=###
+run app.py
