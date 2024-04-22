@@ -9,23 +9,22 @@ The project's goal is to create an app that can assist in recommending the best 
 
 
 ### Required libraries
-Flask
-Flask-Session
-psycopg2-binary
-psycopg2-binary
-SQLAlchemy
-requests
-Werkzeug
-flask_sqlalchemy
-SQLAlchemy You can find all of these libraries in the requirements.txt and install all of them by running this command pip3 install -r requirements.txt in the terminal window.
+* Flask
+* Flask-Session
+* psycopg2-binary
+* psycopg2-binary
+* SQLAlchemy
+* requests
+* flask_sqlalchemy
+* SQLAlchemy You can find all of these libraries in the requirements.txt and install all of them by running this command pip3 install -r requirements.txt in the terminal window.
 
 ### Some Program files
 
-map.js - contains logic for home page including map creation and analytics
-index.html - home page template
-login.html - login page template
-profile.html -  updates user profile templates
-signup.html - register page template
-app.py - app file, contains GET/POST request logic for each page
-usertable.sql - where data about users are stored
-main.css - has styling of the pages
+* map.js - contains logic for home page including map creation and analytics
+* index.html - home page template
+* login.html - login page template
+* profile.html -  updates user profile templates
+* signup.html - register page template
+* app.py - app file, contains GET/POST request logic for each page
+* usertable.sql - where data about users are stored
+* main.css - has styling of the pages
