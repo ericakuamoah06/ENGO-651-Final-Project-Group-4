@@ -37,7 +37,7 @@ The project's goal is to create an app that can assist in recommending the best 
 * Signup Page: Get request to render template
 
 ### Use Cases
-*Users can search available short term rentals in the city of calgary.
-*Users can see a heat map of the traffic incidents in the city
-*Users can share live location on the map
-*users can run analyses with their live location
+* Users can search available short term rentals in the city of calgary.
+* Users can see a heat map of the traffic incidents in the city
+* Users can share live location on the map
+* users can run analyses with their live location
