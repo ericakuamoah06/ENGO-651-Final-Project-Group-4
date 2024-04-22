@@ -35,3 +35,9 @@ The project's goal is to create an app that can assist in recommending the best 
 * Profile Page: Post request to add new user record to database / Get request to render template
 * Home (index) Page: Post request to add update to update list / Get request to render template and get list of updates from database
 * Signup Page: Get request to render template
+
+### Use Cases
+*Users can search available short term rentals in the city of calgary.
+*Users can see a heat map of the traffic incidents in the city
+*Users can share live location on the map
+*users can run analyses with their live location
