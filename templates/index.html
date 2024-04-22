@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GeoGuy</title>
+    <title>My Website</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
 </head>
 
 <body>
@@ -16,7 +17,7 @@
     <div id="sidebar">
         <div class="sideBarContent">
             <div class="sideBarHeader" id="sideBarHeader">
-                <h5 id="sideBarHeaderTitle">Short Term Residents Map</h5>
+                <h5 id="sideBarHeaderTitle" style="color: rgb(3, 27, 75);"><b>My GeoGuy v1.0.0</b></h5>
             </div>
 
             <div id="mapfunctions">
@@ -39,7 +40,7 @@
             <div id="sideBarFooter">
                 <div class="sideBarFooterContainer">
                     <div class="sideBarFooterShareLoc">
-                       
+
                         <small><button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#chartModal">
                                 Show Community Crime Statistics
@@ -59,6 +60,11 @@
                                         </div>
                                     </small></li>
                                 <li><small class="badge badge-purple" id="shortTermRentalCount">
+                                        <div class="spinner-grow" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </small></li>
+                                <li><small class="badge badge-yellow" id="schoolCount">
                                         <div class="spinner-grow" role="status">
                                             <span class="sr-only">Loading...</span>
                                         </div>
@@ -138,7 +144,11 @@
         integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.5.0/turf.min.js" integrity="sha512-Q7HOppxoH0L2M7hreVoFCtUZimR2YaY0fBewIYzkCgmNtgOOZ5IgMNYxHgfps0qrO1ef5m7L1FeHrhXlq1I9HA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.5.0/turf.min.js"
+        integrity="sha512-Q7HOppxoH0L2M7hreVoFCtUZimR2YaY0fBewIYzkCgmNtgOOZ5IgMNYxHgfps0qrO1ef5m7L1FeHrhXlq1I9HA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     <script src="{{ url_for('static', filename='js/map.js') }}"></script>
     <script src="{{ url_for('static', filename='js/chartjs.js') }}"></script>
 
