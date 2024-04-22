@@ -1,2 +1,8 @@
 # ENGO-651-Final-Project-Group-4
-My Geo_Guy is a comprehensive solution to short term housing rental issues in Calgary. Its a user-friendly filtering option, with access to real-time rental data, proximity assessment of essential services, safety evaluation through crime data integration, and real-time updates from landlords. 
+
+* John Oluwamayomikun Oyeniyi (30158233) : Development and QA
+* Eric Akuamoah (30191151) : Development and Presenter
+
+### Project Overview:
+
+The project's goal is to create an app that can assist in recommending the best place to get short term stay at preferred locations in Calgary. Information about the short term rentals from the city of calgary is used. The nearest available accomodation to users location can be seen following user login.
